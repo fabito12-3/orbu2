@@ -1,0 +1,28 @@
+<div id="events-list"></div>
+
+<!-- Incluir el código JavaScript desde el partial -->
+<h1>Intervalos de Temporada Alta</h1>
+    <ul id="intervalos-list"></ul>
+
+    <script>
+        // Ruta al archivo JSON en la carpeta estática
+        fetch('/json/temporada-alta.json')
+            .then(response => response.json())  // Convierte la respuesta a JSON
+            .then(data => {
+                console.log(data);  // Ver el objeto JSON en la consola
+
+                // Acceder a los intervalos y mostrarlos
+                const intervalos = data.intervalos;
+                const listContainer = document.getElementById('intervalos-list');
+
+                // Iterar sobre los intervalos y añadirlos a la lista
+                intervalos.forEach(intervalo => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Desde: ${intervalo.inicio} hasta: ${intervalo.fin}`;
+                    listContainer.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error al cargar el archivo JSON:', error);
+            });
+    </script>

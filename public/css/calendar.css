@@ -1,0 +1,151 @@
+.btn-calendar, .btn-reservar {
+  width: 200px; 
+  height: 40px; 
+  background-color: var(--blanco-oscuro); /* Color de fondo (verde brillante) */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de la fuente */
+  text-align: center; /* Centrar el texto */
+  display: flex; /* Utilizamos flexbox para centrar el texto */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease; /* Transición suave para efectos al pasar el mouse */
+}
+.btn-calendar:hover {
+  background-color: var(--morado); /* Un verde un poco más oscuro al hacer hover */
+}
+.btn-reservar:hover {
+  background-color: rgb(23, 206, 23); /* Un verde un poco más oscuro al hacer hover */
+}
+.btn-close{
+  position: absolute;
+  top: 300px;
+  left: 240px;
+  cursor: pointer; 
+  padding: 5px; 
+  background-color: #e030305b; 
+  color: white; border-radius: 5px; width: 60px; 
+  text-align: center; 
+  margin-bottom: 10px;
+}
+.grid-container {
+  display: none;
+  grid-template-rows: 1fr 7fr 2fr;
+  width: 320px;
+  height: 353px;
+  background-color: rgba(211, 211, 211, 0.541);
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: var(--blanco-oscuro);
+}
+
+
+.grid-item-1 {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 4px;
+  margin: 3px 0px;
+  align-items: center;
+  justify-items: center;
+}
+
+.button {
+  background-color: #4682b4;
+  color: white;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.grid-item-2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+  grid-template-rows: repeat(7, 1fr); /* 7 filas */
+  height: 200px;
+}
+
+.grid-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  margin: 2px;
+  font-family: 'poppins-light'; /* Nombre de la fuente */
+  font-size: 10pt;
+  cursor: default
+}
+
+
+/* Estilo para los días de la semana */
+.grid-cell-days {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-family: 'poppins-medium'; /* Nombre de la fuente */
+  border-bottom: 1px solid black;
+  cursor: default; /* Deshabilitar la interactividad */
+}
+
+/* Estilo para las celdas seleccionadas */
+
+
+/* Estilo para el día de hoy */
+.grid-cell.today {
+  background-color: #32CD32; /* Resaltar el día de hoy con color verde */
+  color: white;
+}
+
+/* Estilo para los días pasados */
+.grid-cell.past {
+  color: rgb(177, 177, 177); /* Cambiar el color del texto a gris para los días pasados */
+  cursor: default; /* Deshabilitar la interacción */
+}
+.grid-cell-days:hover, .grid-cell.past:hover, .reserved:hover {
+  background-color: inherit; /* Cambiar el color del texto a gris para los días pasados */
+}
+/* Estilo para los días de temporada alta */
+.grid-cell.high-season {
+  border-bottom: 2px solid #eb4200; /* Borde sutil en color naranja */
+  border-radius: 4px; /* Bordes redondeados */
+  padding-bottom: 3px; /* Espaciado adicional en la parte inferior */
+}
+
+
+.mes {
+  font-size: 16px;
+  font-family: 'poppins-medium'; /* Nombre de la fuente */
+  color: var(--morado);
+  text-align: center;
+}
+.reserved {
+  background-color: grey;  /* Puedes cambiar el color de fondo como lo desees */
+  color: white;
+  cursor: default;
+}
+.reserved:hover {
+  background-color:grey;  /* Puedes cambiar el color de fondo como lo desees */
+
+}
+/* Estilo CSS */
+.cheks {
+  display: flex;
+  gap: 20px;
+  background-color: #4682b4;
+  width: 100px;
+  height: 20px;
+}
+
+.days-stay {
+  margin-top: 20px;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+
+
+
+
+

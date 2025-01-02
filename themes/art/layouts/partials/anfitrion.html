@@ -1,0 +1,22 @@
+
+<section class="card_anfitrion">
+    <picture class="image_anfitrion">
+      <img src="/images/{{ .Params.image }}_1.jpeg" alt="{{ .Params.name }}" class="image-main">
+    </picture>
+</section>
+<style>
+  .card_anfitrion {
+    display: flex;
+    background-color: var(--blanco-oscuro);
+    border-radius: 30px;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    height: 353px;
+  }
+  .image_anfitrion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

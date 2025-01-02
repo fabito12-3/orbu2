@@ -1,0 +1,170 @@
+{{ define "main" }}
+<section>
+  <h2 class="names">Apartamentos</h2>
+  <div class="carrusel">
+    <!-- Recorre todos los archivos en la sección 'apartamentos' -->
+    {{ range .Site.Pages }}
+      <!-- Verifica si la página está en la sección 'apartamento' y si tiene el parámetro 'name' -->
+      {{ if and (eq .Section "apartamento") .Params.name }}
+        <!-- Para cada página en la sección apartamentos que tenga el parámetro 'name', genera una tarjeta -->
+        {{ partial "card_apartamentos.html" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+<section>
+  <h2 class="names">Nuestras instalaciones</h2>
+  <div class="carrusel">
+    <!-- Recorre todos los objetos en el JSON de 'instalaciones' -->
+    {{ range .Site.Data.instalaciones.instalaciones }}
+    <div class="card-2" style="display: flex; width: 100%;height: auto;flex-direction: column;background-color: var(--blanco-oscuro);text-align: center;gap: 10px;border-radius: 20px;overflow: hidden;">
+          <img src="/images/{{ .image }}" alt="{{ .Params.name }}" class="image-main-2" style="width: 100%;min-height: 300px;object-fit: cover;">
+        <div class="partial_texto">
+          <h3>{{ .nombre }}</h3>
+          <h2>{{ .mensaje }}</h2>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+<section>
+  <h2 class="names">Galeria de fotos</h2>
+  <section class="collage">
+    {{ range .Site.Data.imagenes.imagenes }}
+      <div >
+          <img src="/images/{{ .image }}" alt="">
+      </div>
+    {{ end }}
+  </section>
+  
+</section>
+<style>
+  .names{
+    text-align: center;
+  color: var(--morado);
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-family: poppins-medium;
+  }
+.instalacion-card{
+  height: 300px;
+}
+.instalacion-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius:20px ;
+  filter: brightness(0.5) contrast(1) grayscale(0); /* Filtro con color negro semitransparente */
+}
+.instalacion-card h3{
+  position: relative;
+  bottom: 40px;
+  left: 10px;
+  font-family: poppins-thin;
+
+}
+
+.collage{
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(6, 200px);  
+  grid-template-columns: repeat(4, 1fr);
+
+grid-template-areas: 
+ "uno      uno     dos     tres"
+ "uno      uno     cuatro  cuatro"
+ "cinco    seis    cuatro  cuatro"
+ "siete    siete   ocho    nueve"
+ "siete    siete   diez    diez   "
+ "once     doce    diez    diez   ";
+}
+
+.collage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collage > div{
+overflow: hidden;
+border-radius: 10px;
+}
+.collage :nth-child(1){
+  grid-area: uno;
+}
+.collage :nth-child(2){
+  grid-area: dos;
+}
+.collage :nth-child(3){
+  grid-area: tres;
+}
+.collage :nth-child(4){
+  grid-area: cuatro;
+}
+.collage :nth-child(5){
+  grid-area: cinco;
+}
+.collage :nth-child(6){
+  grid-area: seis;
+}
+.collage :nth-child(7){
+  grid-area: siete;
+}
+.collage :nth-child(8){
+  grid-area: ocho;
+}
+.collage :nth-child(9){
+  grid-area: nueve;
+}
+.collage :nth-child(10){
+  grid-area: diez;
+}
+.collage :nth-child(11){
+  grid-area: once;
+}
+.collage :nth-child(12){
+  grid-area: doce;
+}
+@media (max-width: 760px) {
+  .collage{
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(6, 1fr);  
+  grid-template-columns: repeat(2, 1fr);
+
+grid-template-areas: 
+ "uno    dos"
+ "tres   cuatro  "
+ "cinco  seis  "
+ "siete   ocho "
+ "nueve   diez "
+ "once    doce ";
+ 
+}
+}
+@media (max-width: 550px) {
+  .collage{
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(8, 100%);  
+  grid-template-columns: repeat(1, 1fr);
+
+grid-template-areas: 
+"uno"
+ "dos"
+ "tres"
+ "cuatro"
+ "cinco"
+ "seis"
+ "siete"
+ "ocho" 
+ "nueve"
+ "diez"
+ "once"
+ "doce";
+}
+}
+</style>
+{{ end }}

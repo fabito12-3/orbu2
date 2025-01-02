@@ -1,0 +1,80 @@
+
+<section><a href="{{ .Page.RelPermalink }}" class="card">
+    <picture class="image">
+      <img src="/images/{{ .Params.image }}_1.jpeg" alt="{{ .Params.name }}" class="image-main">
+      <img src="/images/{{ .Params.image }}_2.jpeg" alt="{{ .Params.name }}" class="image-hover">
+    </picture>
+    <div class="partial_texto">
+      <h3>{{ .Params.name }}</h3>
+      <h2>{{ .Params.tipo }}</h2>
+    </div>
+</a></section>
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--blanco-oscuro);
+    border-radius: 30px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    /* position: relative; */
+    width: 100%;
+  }
+
+  .card:hover {
+    box-shadow: 0 0 15px 5px rgba(169, 169, 169, 0.7);
+  }
+
+  .image {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+  }
+
+  .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .image-main {
+    display: block;
+  }
+
+  .image-hover {
+    display: none;
+  }
+
+  .card:hover .image-main {
+    display: none;
+  }
+
+  .card:hover .image-hover {
+    display: block;
+  }
+
+  .partial_texto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .partial_texto h2 {
+    color: var(--morado);
+    font-size: 10pt;
+    font-family: 'poppins-light';
+  }
+  .partial_texto h3 {
+    font-size: 12pt;
+    color: var(--gris-oscuro);
+    font-family: 'poppins-light';
+
+  }
+</style>

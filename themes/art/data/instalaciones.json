@@ -1,0 +1,54 @@
+{
+  "instalaciones": [
+    {
+      "nombre": "Coworking",
+      "mensaje": "Espacio de trabajo",
+      "image": "samaria_2_860.jpg"
+    },
+    {
+      "nombre": "Piscina de entreno",
+      "mensaje": "Entrena y disfruta",
+      "image": "samaria_3_860.jpg"
+    },
+    {
+      "nombre": "Zona de juegos",
+      "mensaje": "Diversión para todos",
+      "image": "samaria_5_860.jpg"
+    },
+    {
+      "nombre": "Gimnasio",
+      "mensaje": "Fuerza y salud",
+      "image": "samaria_6_860.jpg"
+    },
+    {
+      "nombre": "Sauna",
+      "mensaje": "Relájate y revive",
+      "image": "samaria_10_860.jpg"
+    },
+    {
+      "nombre": "Jacuzzi",
+      "mensaje": "Momento de relax",
+      "image": "samaria_7_860.jpg"
+    },
+    {
+      "nombre": "Spa",
+      "mensaje": "Bienestar total",
+      "image": "samaria_8_860.jpg"
+    },
+    {
+      "nombre": "Quiosco",
+      "mensaje": "Refrigerios rápidos",
+      "image": "samaria_9_860.jpg"
+    },
+    {
+      "nombre": "Piscina niños",
+      "mensaje": "Diversión acuática",
+      "image": "samaria_11_860.jpg"
+    },
+    {
+      "nombre": "Piscina adultos",
+      "mensaje": "Relájate y nada",
+      "image": "samaria_12_860.jpg"
+    }
+  ]
+}

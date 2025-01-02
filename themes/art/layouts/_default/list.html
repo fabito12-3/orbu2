@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ if eq .Path "/ciudades" }}
+    <h1>{{ .Title }}</h1>
+    <div class="carrusel">
+
+    {{ partial "card_ciudades.html" . }}
+  </div>
+
+    {{ else }}
+    <section class="collection-category">
+      {{ partial "banner.html" . }}
+  {{ end }}
+</section>
+{{ end }}

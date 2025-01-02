@@ -1,0 +1,306 @@
+<section class="single">
+    <div class="single_1">
+      <div id="imagen-container"></div>
+    </div>
+
+    <div class="single_2">
+      <div class="single_2_1">
+        {{ with .Params.name }}
+          <h3>{{ . }}</h3>
+        {{ end }}
+        {{ with .Params.tipo }}
+          <h2>{{ . }}</h2>
+        {{ end }}
+      </div>
+      <div class="single_2_2">
+        <p>{{ .Content }}</p>
+      </div>
+      <div class="single_2_3">
+        <ul>
+          {{ range .Params.items }}
+            {{ $words := split . " " }}
+            {{ $imageWord := index $words 1 }} 
+            <li>
+              <div class="single_2_3_1">
+                <img src="{{ printf "/images/%s.svg" $imageWord | urlize }}" alt="Icono">
+              </div>
+            
+              <p>{{ . }}</p>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="btn-reservar">
+        <p>Reservar ahora</p>
+      </div>
+      <div class="btn-calendar">
+        <p>Consultar calendario</p>
+      </div>
+  </div>
+  </section> 
+  <section class="single_3">
+      <div class="single_3_1">
+        <img src="/images/anfitrion_miriam.jpeg" alt="">
+      </div>
+      {{ partial "calendar.html" .}}
+    <div class="single_3_2">
+      <h3>Comentarios recientes:</h3>
+      <div class="comentarios">
+        <ul>
+          {{ range .Params.comentarios }}
+            <li>
+              <div class="comentario">
+                <p>{{ . }}</p>
+              </div>
+            </li>
+          {{ end }}
+        </ul>
+      </div>    
+    </div>
+
+  </section>
+
+<style>
+.single {
+  display: flex;
+  gap: 20px;
+}
+
+.single_1,
+.single_2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.single_1 img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.single_2_1 {
+  gap: 10px;
+}
+
+.single_2 h2, .single_3_2 h3 {
+
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:var(--morado);
+  font-family: 'poppins-light';
+}
+
+
+.single_2 h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color:var(--gris-oscuro);
+  font-family: 'poppins-light';
+}
+.single_2 p,.single_3_2 p, .single_3_1_1 p{
+  font-size: 16px;
+  color:var(--gris-oscuro);
+  font-family: 'poppins-light';
+}
+
+
+.single_2_2 {
+  line-height: 1.2;
+}
+
+.single_2_3 ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.single_2_3 li {
+  display: flex;
+
+align-items: center;
+
+}
+.single_2_3 p{
+  font-size: 10pt;
+}
+
+.single_2_3_1 {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.single_2_3_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single_2_4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  font-size: 16px;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.single_3 {
+  display: flex; /* Utilizamos flexbox para dividir en columnas */
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  gap:20px;
+}
+
+/* Columna de la izquierda */
+.single_3_1 {
+  width: 320px;
+  height: 353px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow:hidden;
+}
+.single_3_1 img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.single_3_1_1{
+  background-color: rgba(211, 211, 211, 0.541);
+  width: 100%;
+  height: auto;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+}
+.single_3_1_1 h3{
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.single_3_2 {
+  display: grid;
+  flex: 1;
+}
+.comentarios ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  .comentarios{
+    gap: 10px;
+  }
+  .comentario{
+    background-color: rgba(211, 211, 211, 0.541);
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+
+.check-in, .check-out {
+  flex: 1;
+  background-color: var(--morado);
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.check-in input, .check-out input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.check-in input:focus, .check-out input:focus {
+  border-color: #007BFF;
+}
+
+.check-in input::before, .check-out input::before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 912px) {
+  .single {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single_1,
+  .single_2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .single_3{
+    flex-direction: column;
+  }
+  .single_3_1 {
+    width: 100%;
+  }
+  .single_3_2 {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .single_2_3 ul{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Extraer los valores de numero_imagenes e image3 desde el frontmatter
+    const numeroImagenes = "{{ .Params.numero_imagenes }}";
+    const imagenBase = "{{ .Params.image }}";
+
+    // Crear la imagen dinámica
+    const imagenContainer = document.getElementById("imagen-container");
+    const imagenElement = document.createElement("img");
+    imagenElement.id = "imagenPrincipal";  // Asignar ID para identificar la imagen
+    imagenElement.alt = "{{ .Params.name }}";  // Texto alternativo
+
+    // Ruta inicial de la imagen
+    let index = 1;
+    imagenElement.src = `../../images/${imagenBase}_${index}.jpeg`;
+
+    // Insertar la imagen en el contenedor
+    imagenContainer.appendChild(imagenElement);
+
+    // Cambiar la imagen cada 2 segundos
+    setInterval(function() {
+      // Incrementar el índice y asegurarse de que no se pase del número de imágenes
+      index = (index % numeroImagenes) + 1;  // Vuelve al 1 después del número máximo
+
+      // Cambiar la ruta de la imagen
+      imagenElement.src = `../../images/${imagenBase}_${index}.jpeg`;  // Establecer la nueva ruta
+    }, 2000); // Intervalo de 2 segundos (2000 ms)
+  });
+</script>

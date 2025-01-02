@@ -1,0 +1,38 @@
+<div class="card_calificacion">
+    {{ with .Params.calificacion }}
+        <div class="puntuacion">
+          <h3>{{ . }}</h3>
+        </div> 
+        <p>La puntuación se calcula de personas que reservaron con nosotros, de esta manera nos aseguramos de mostrar datos reales.</p>
+    {{ end }}
+</div>
+
+<style>
+    .card_calificacion {
+        width: 100%;
+        height: 353px;
+        background-color: var(--blanco-oscuro);
+        padding: 20px; /* Agregar un poco de relleno para mejor presentación */
+        box-sizing: border-box;
+    }
+    
+    .puntuacion {
+        width: 80px; 
+        height: 50px; 
+        display: flex; 
+        background-color: rgb(49, 189, 49); 
+        border-radius: 20px; 
+        align-items: center; 
+        justify-content: center;
+        font-size: 1.5rem; /* Ajuste de tamaño de fuente para mejor visibilidad */
+        font-weight: bold; /* Hacer que el texto se vea más destacado */
+        color: white; /* Hacer el texto blanco para que resalte sobre el fondo verde */
+        margin-bottom: 10px; /* Espaciado entre la calificación y el texto descriptivo */
+    }
+    
+    .card_calificacion p {
+        font-family: 'Arial', sans-serif; /* Usar una fuente más común */
+        font-size: 1rem;
+        color: #333; /* Color de texto más oscuro para el párrafo */
+    }
+</style>

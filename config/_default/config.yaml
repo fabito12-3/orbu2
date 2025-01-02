@@ -1,0 +1,7 @@
+baseURL: ""  # Asegúrate de definir la baseURL cuando vayas a producción
+title: "ORBU"
+description: "Descripción de tu sitio"
+contentDir: "kontent"  # Definido solo una vez a nivel global
+theme: "art"
+relativeURLs: true
+

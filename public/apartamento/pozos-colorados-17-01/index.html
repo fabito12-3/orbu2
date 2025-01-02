@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title> | ORBU</title>
+
+
+<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../css/calendar.css">
+<link rel="stylesheet" href="../../css/header.css">
+<link rel="stylesheet" href="../../css/styles.css"> 
+
+
+<link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+
+<script src="../../js/script.js"></script> 
+<script src="../../js/main.js"></script>
+<script src="../../js/calendar.js"></script>
+<script src="../../js/header.js"></script>
+
+</head>
+<body>
+  <header>
+    
+<div class="header">
+    <div class="logo-2">
+        <h1><a href="../../">ORBU</a></h1>
+    </div>
+</div>
+
+
+  </header>
+  <main>
+    
+  
+  
+    <section class="single">
+    <div class="single_1">
+      <div id="imagen-container"></div>
+    </div>
+
+    <div class="single_2">
+      <div class="single_2_1">
+        
+          <h3>Pozos Colorados 17-01</h3>
+        
+        
+          <h2>Apartamento con vista al mar</h2>
+        
+      </div>
+      <div class="single_2_2">
+        <p><p>En su interior encontrara una amplia cocina y zona humeda con lavadora, mas adelante encontrara la sala-comedor ideal para compartir en familia, con un sofá cama, sofa auxiliar y TV para mayor comodidad.</p>
+<p>Desde el balcón, podrás disfrutar de reuniones al aire libre con vistas impresionantes.</p>
+<p>La habitación principal cuenta con baño independiente y una cama king para un descanso de lujo.</p>
+</p>
+      </div>
+      <div class="single_2_3">
+        <ul>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/personas.svg" alt="Icono">
+              </div>
+            
+              <p>8 personas maximo</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/aires.svg" alt="Icono">
+              </div>
+            
+              <p>4 aires acondicionados</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/tv.svg" alt="Icono">
+              </div>
+            
+              <p>4 TV LED</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/camas.svg" alt="Icono">
+              </div>
+            
+              <p>4 camas</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/habitaciones.svg" alt="Icono">
+              </div>
+            
+              <p>3 Habitaciones</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/ba%C3%B1os.svg" alt="Icono">
+              </div>
+            
+              <p>2 baños completos</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/sofa.svg" alt="Icono">
+              </div>
+            
+              <p>1 sofa cama</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/lavadora.svg" alt="Icono">
+              </div>
+            
+              <p>1 lavadora</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/wifi.svg" alt="Icono">
+              </div>
+            
+              <p>Conexion Wifi</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/y.svg" alt="Icono">
+              </div>
+            
+              <p>Cocina y nevecon</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/con.svg" alt="Icono">
+              </div>
+            
+              <p>Balcon con vista al mar</p>
+            </li>
+          
+            
+             
+            <li>
+              <div class="single_2_3_1">
+                <img src="../../images/gratis.svg" alt="Icono">
+              </div>
+            
+              <p>Parqueadero Gratis</p>
+            </li>
+          
+        </ul>
+      </div>
+      <div class="btn-reservar">
+        <p>Reservar ahora</p>
+      </div>
+      <div class="btn-calendar">
+        <p>Consultar calendario</p>
+      </div>
+  </div>
+  </section> 
+  <section class="single_3">
+      <div class="single_3_1">
+        <img src="../../images/anfitrion_miriam.jpeg" alt="">
+      </div>
+        <div class="grid-container">
+    <div class="btn-close">
+      <p >Cerrar</p>
+    </div>
+
+    <div class="grid-item-1">
+      <button class="button left" onclick="changeMonth(-1)">←</button>
+      <div class="mes" id="mes"></div>
+      <button class="button right" onclick="changeMonth(1)">→</button>
+    </div>
+
+    <div class="grid-item-2" id="calendar">
+      <div class="grid-cell-days">L</div>
+      <div class="grid-cell-days">M</div>
+      <div class="grid-cell-days">M</div>
+      <div class="grid-cell-days">J</div>
+      <div class="grid-cell-days">V</div>
+      <div class="grid-cell-days">S</div>
+      <div class="grid-cell-days">D</div>
+    </div>
+
+    <div class="grid-item-3">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #32CD32; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Día de hoy</p></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #eb4200; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Temporada Alta</p></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #3a3a3a; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Reservado</p></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+document.querySelector('.btn-close').addEventListener('click', function() {
+  var calendar = document.querySelector('.grid-container');
+  
+  
+  calendar.style.transition = 'transform 0.5s ease'; 
+  calendar.style.transform = 'translateX(-100%)'; 
+  
+  
+  setTimeout(function() {
+    calendar.style.display = 'none';
+  }, 500); 
+});
+
+
+document.querySelector('.btn-calendar').addEventListener('click', function() {
+  var calendar = document.querySelector('.grid-container');
+  
+  
+  calendar.style.display = 'block';
+  
+  
+  setTimeout(function() {
+    calendar.style.transition = 'transform 0.5s ease'; 
+    calendar.style.transform = 'translateX(0)'; 
+  }, 10); 
+});
+
+</script>
+    <div class="single_3_2">
+      <h3>Comentarios recientes:</h3>
+      <div class="comentarios">
+        <ul>
+          
+            <li>
+              <div class="comentario">
+                <p>Excelente lugar para descansar, muy tranquilo, sin ruidos fuertes. En general, todo estuvo sin contratiempos. Un aspecto a mejorar sería una pequeña falla energética en el edificio y las recepcionistas no facilitan información, la actitud no es la mejor.</p>
+              </div>
+            </li>
+          
+            <li>
+              <div class="comentario">
+                <p>La ubicación es maravillosa, con una vista espectacular al mar. El apartamento está bien equipado y tiene todo lo que necesitamos para pasar una estancia cómoda. Definitivamente volveré.</p>
+              </div>
+            </li>
+          
+            <li>
+              <div class="comentario">
+                <p>El servicio fue excepcional. El personal fue muy amable y atento a nuestras necesidades. La limpieza y el orden del lugar eran impecables. ¡Recomiendo mucho este lugar!</p>
+              </div>
+            </li>
+          
+            <li>
+              <div class="comentario">
+                <p>Muy buena experiencia, todo estuvo perfecto. La zona es tranquila, ideal para desconectar. Las instalaciones son modernas y cómodas, con todo lo necesario para disfrutar al máximo.</p>
+              </div>
+            </li>
+          
+        </ul>
+      </div>    
+    </div>
+
+  </section>
+
+<style>
+.single {
+  display: flex;
+  gap: 20px;
+}
+
+.single_1,
+.single_2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.single_1 img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.single_2_1 {
+  gap: 10px;
+}
+
+.single_2 h2, .single_3_2 h3 {
+
+  font-size: 16px;
+  letter-spacing: 1px;
+  color:var(--morado);
+  font-family: 'poppins-light';
+}
+
+
+.single_2 h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color:var(--gris-oscuro);
+  font-family: 'poppins-light';
+}
+.single_2 p,.single_3_2 p, .single_3_1_1 p{
+  font-size: 16px;
+  color:var(--gris-oscuro);
+  font-family: 'poppins-light';
+}
+
+
+.single_2_2 {
+  line-height: 1.2;
+}
+
+.single_2_3 ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.single_2_3 li {
+  display: flex;
+
+align-items: center;
+
+}
+.single_2_3 p{
+  font-size: 10pt;
+}
+
+.single_2_3_1 {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.single_2_3_1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single_2_4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  font-size: 16px;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.single_3 {
+  display: flex;  
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  gap:20px;
+}
+
+ 
+.single_3_1 {
+  width: 320px;
+  height: 353px;
+  background-color: #333;
+  border-radius: 20px;
+  overflow:hidden;
+}
+.single_3_1 img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+.single_3_1_1{
+  background-color: rgba(211, 211, 211, 0.541);
+  width: 100%;
+  height: auto;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 170px;
+}
+.single_3_1_1 h3{
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.single_3_2 {
+  display: grid;
+  flex: 1;
+}
+.comentarios ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  .comentarios{
+    gap: 10px;
+  }
+  .comentario{
+    background-color: rgba(211, 211, 211, 0.541);
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+
+.check-in, .check-out {
+  flex: 1;
+  background-color: var(--morado);
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.check-in input, .check-out input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.check-in input:focus, .check-out input:focus {
+  border-color: #007BFF;
+}
+
+.check-in input::before, .check-out input::before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 912px) {
+  .single {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single_1,
+  .single_2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
+@media (max-width: 640px) {
+  .single_3{
+    flex-direction: column;
+  }
+  .single_3_1 {
+    width: 100%;
+  }
+  .single_3_2 {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .single_2_3 ul{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    const numeroImagenes = "9";
+    const imagenBase = "pozos colorados 17-01";
+
+    
+    const imagenContainer = document.getElementById("imagen-container");
+    const imagenElement = document.createElement("img");
+    imagenElement.id = "imagenPrincipal";  
+    imagenElement.alt = "Pozos Colorados 17-01";  
+
+    
+    let index = 1;
+    imagenElement.src = `../../images/${imagenBase}_${index}.jpeg`;
+
+    
+    imagenContainer.appendChild(imagenElement);
+
+    
+    setInterval(function() {
+      
+      index = (index % numeroImagenes) + 1;  
+
+      
+      imagenElement.src = `../../images/${imagenBase}_${index}.jpeg`;  
+    }, 2000); 
+  });
+</script>
+
+  
+
+  </main>
+  <footer>
+        <div class="footer-top">
+        <section class="section-1">
+            <h2>Información y Ayuda</h2>
+            <ul>
+                <li><h3><a href="../../informacion">¿Quiénes somos?</a></h3></li>
+                <li><h3><a href="../../informacion">Misión</a></h3></li>
+                <li><h3><a href="../../informacion">Visión</a></h3></li>
+                <li><h3><a href="../../informacion">Preguntas Frecuentes</a></h3></li>
+                
+                <div style="display: flex;background-color: rgba(233, 18, 18, 0.829);width: 70px; height: 30px;border-radius: 10px;justify-content: center;align-items: center;">
+                    <li><h3><a href="">Soporte</a></h3></li>
+                </div>
+            </ul>
+            
+            
+        </section>
+
+        <section class="section-2">
+            <h2>Otras Dependencias</h2>
+            <ul>
+                <li><h3>Newsletter Noticias</h3></li>
+                <li><h3>Blog</h3></li>
+            </ul>
+        </section>
+
+        <section class="section-3">
+            <h2>Redes Sociales</h2>
+            <div class="redes-sociales">
+                    <img src="../../images/youtube.svg" alt="Imagen de Habitaciones" />
+                    <img src="../../images/instagram.svg" alt="Imagen de Habitaciones" />   
+                    <img src="../../images/tiktok.svg" alt="Imagen de Habitaciones" />
+                    <img src="../../images/telegram.svg" alt="Imagen de Habitaciones" />
+            </div>
+        </section>
+    </div>
+
+    <div class="footer-bottom">
+        <h4>Diseñado Por Zenaku A ZENAKU GROUP © 2024.</h4>
+    </div>
+</footer>
+
+  </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ $path := .RelPermalink | urlize }}
+  {{ if strings.Contains $path "informacion" }}
+    {{ partial "informacion.html" . }}
+  {{ else if strings.Contains $path "guias" }}
+    {{ partial "guias.html" . }}
+  {{ else if strings.Contains $path "galeria" }}
+    {{ partial "galeria.html" . }}
+  {{ else }}
+    {{ partial "preview.html" . }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,28 @@
+{{ if eq .Path "/" }}
+<div class="banner" id="banner">
+    <!-- Logo dentro del banner -->
+    <div class="logo">
+        <h1><a class="logo-link" href="/"> {{ .Site.Title }} </a></h1>
+    </div>    
+
+    <!-- Texto dinámico del banner -->
+    <div class="texto">
+        <h2 id="banner-text">Este texto también será cambiante, cada dos imágenes de JS</h2>
+    </div>
+
+    <!-- Imagen de fondo que cambiará -->
+    <img id="banner-image" src="/images/samaria_2_1920.jpg" alt="banner" loading="lazy">
+
+    <!-- Otra capa de texto encima (puedes usarla para más efectos si lo deseas) -->
+    <div class="texto-encima">
+        <h2></h2>
+    </div>
+</div>
+
+{{ else }}
+<div class="header">
+    <div class="logo-2">
+        <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+    </div>
+</div>
+{{ end }}

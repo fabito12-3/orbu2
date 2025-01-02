@@ -1,0 +1,67 @@
+  <div class="grid-container">
+    <div class="btn-close">
+      <p >Cerrar</p>
+    </div>
+
+    <div class="grid-item-1">
+      <button class="button left" onclick="changeMonth(-1)">←</button>
+      <div class="mes" id="mes"></div>
+      <button class="button right" onclick="changeMonth(1)">→</button>
+    </div>
+
+    <div class="grid-item-2" id="calendar">
+      <div class="grid-cell-days">L</div>
+      <div class="grid-cell-days">M</div>
+      <div class="grid-cell-days">M</div>
+      <div class="grid-cell-days">J</div>
+      <div class="grid-cell-days">V</div>
+      <div class="grid-cell-days">S</div>
+      <div class="grid-cell-days">D</div>
+    </div>
+
+    <div class="grid-item-3">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #32CD32; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Día de hoy</p></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #eb4200; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Temporada Alta</p></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="background-color: #3a3a3a; width: 15px; height: 15px; border-radius: 50%;"></div>
+        <div><p>Reservado</p></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// Función para cerrar el calendario con animación
+document.querySelector('.btn-close').addEventListener('click', function() {
+  var calendar = document.querySelector('.grid-container');
+  
+  // Aplica la animación de deslizamiento hacia la izquierda
+  calendar.style.transition = 'transform 0.5s ease'; // Define la transición
+  calendar.style.transform = 'translateX(-100%)'; // Mueve el calendario fuera de la vista
+  
+  // Después de la animación, cambia el display a none para que no ocupe espacio
+  setTimeout(function() {
+    calendar.style.display = 'none';
+  }, 500); // 500 ms coincide con la duración de la animación
+});
+
+// Función para abrir el calendario con animación
+document.querySelector('.btn-calendar').addEventListener('click', function() {
+  var calendar = document.querySelector('.grid-container');
+  
+  // Asegúrate de que esté visible antes de aplicar la animación
+  calendar.style.display = 'block';
+  
+  // Aplica la animación de deslizamiento desde la izquierda
+  setTimeout(function() {
+    calendar.style.transition = 'transform 0.5s ease'; // Define la transición
+    calendar.style.transform = 'translateX(0)'; // Mueve el calendario a su posición original
+  }, 10); // Usamos un pequeño retraso para asegurar que el cambio de display se aplique antes de la animación
+});
+
+</script>
